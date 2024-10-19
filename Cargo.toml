@@ -1,6 +1,6 @@
 [package]
 name = "dll-mod-loader"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
 description = "A DLL mod loader for Windows"
 license = "MIT"
@@ -14,6 +14,13 @@ lto = true
 opt-level = 3
 
 [dependencies]
+thiserror = "1"
 dll-injector = { version = "0.1" }
-winapi = { version = "0.3", features = ["processthreadsapi", "memoryapi", "libloaderapi", "winbase", "winnt", "handleapi"] }
-
+winapi = { version = "0.3", features = [
+    "processthreadsapi",
+    "memoryapi",
+    "libloaderapi",
+    "winbase",
+    "winnt",
+    "handleapi",
+] }

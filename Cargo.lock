@@ -117,9 +117,10 @@ dependencies = [
 
 [[package]]
 name = "dll-mod-loader"
-version = "0.1.0"
+version = "0.2.0"
 dependencies = [
  "dll-injector",
+ "thiserror",
  "winapi",
 ]
 
