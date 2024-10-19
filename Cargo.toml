@@ -1,0 +1,19 @@
+[package]
+name = "dll-mod-loader"
+version = "0.1.0"
+edition = "2021"
+description = "A DLL mod loader for Windows"
+license = "MIT"
+readme = "README.md"
+authors = ["wvvern"]
+keywords = ["dll", "injection", "mod", "loader", "windows"]
+repository = "https://github.com/AndrewKorchemniy/dll-mod-loader"
+
+[profile.release]
+lto = true
+opt-level = 3
+
+[dependencies]
+dll-injector = { version = "0.1" }
+winapi = { version = "0.3", features = ["processthreadsapi", "memoryapi", "libloaderapi", "winbase", "winnt", "handleapi"] }
+
